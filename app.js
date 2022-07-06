@@ -29,7 +29,13 @@ function playRound(playerSelection, computerSelection) {
     return "you win! scissors beats paper!";
   }
 }
-const playerSelection = "paper";
-const computerSelection = computerPlay();
 
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+  for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt("Make your selection");
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+  }
+}
+
+game();
